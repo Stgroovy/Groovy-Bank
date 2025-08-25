@@ -40,9 +40,27 @@ namespace Groovy_Bank
 
         }
 
-        public double Transfer()
+        public void Deposit()
         {
 
+        }
+
+        public void Transfer()
+        {
+            Console.WriteLine("Enter Account Number: ");
+            string accountNumber = Console.ReadLine();
+
+            Console.WriteLine("Enter Amount: ");
+            double amount = double.Parse(Console.ReadLine());
+
+            if (amount < 50)
+            {
+                Console.WriteLine("below minimum transaction amount");
+            }
+            else
+            {
+                Console.WriteLine("Transaction Successful");
+            }
         }
     }
 }
